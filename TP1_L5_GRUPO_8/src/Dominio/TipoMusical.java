@@ -1,9 +1,10 @@
 package Dominio;
 
-public class TipoMusical {
+public class TipoMusical extends Tipo {
     private String descripcion;
 
-    public TipoMusical(String descripcion) {
+    public TipoMusical(int ID, String nombre, String descripcion) {
+        super(ID, nombre);
         this.descripcion = descripcion;
     }
 

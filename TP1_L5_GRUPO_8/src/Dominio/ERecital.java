@@ -6,12 +6,12 @@ public class ERecital extends Entrada {
 
 	private boolean TipoEntradaVIP;
 	private Banda Banda; // Objeto del tipo Banda (crear Clase)
-	private ArrayList<Banda> BandasSoporte // 1 o 2 bandas permitidas
+	private ArrayList<Banda> BandasSoporte; // 1 o 2 bandas permitidas
 	
 	
 	public ERecital(String nombreShow, String diaEvento, String horario, double duracionAproximada, double costo,
 			boolean tipoEntradaVIP, Banda banda, ArrayList<Banda> bandasSoporte) {
-		super(nombreShow, diaEvento, horario, duracionAproximada, costo);
+		super(nombreShow, diaEvento, horario, duracionAproximada);
 		TipoEntradaVIP = tipoEntradaVIP;
 		Banda = banda;
 		BandasSoporte = bandasSoporte;

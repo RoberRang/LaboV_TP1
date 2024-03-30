@@ -12,24 +12,20 @@ public abstract class Entrada {
     private String diaEvento;
     private String horario;
     private double duracionAproximada;
-    private double costo;
 
 	// Constructor
     public Entrada( String nombreShow, String diaEvento, String horario,
-                  double duracionAproximada, double costo) {
+                  double duracionAproximada) {
         this.nombreShow = nombreShow;
         this.diaEvento = diaEvento;
         this.horario = horario;
         this.duracionAproximada = duracionAproximada;
-        this.costo = costo;
         
         cont++;
 		this.numeroEntrada = cont;
     }
 
-    // Métodos abstractos que deben ser implementados por las clases que hereden de Evento
-    public abstract void mostrarDetalles();
-
+    // Métodos abstractos que deben ser implementados por las clases que hereden de Evento  
     public abstract void calcularPrecio();
 
     // Getters y setters
@@ -53,15 +49,10 @@ public abstract class Entrada {
         return duracionAproximada;
     }
 
-    public double getCosto() {
-        return costo;
-    }
-
 	@Override
 	public String toString() {
 		return "Entrada [numeroEntrada=" + numeroEntrada + ", nombreShow=" + nombreShow + ", diaEvento=" + diaEvento
-				+ ", horario=" + horario + ", duracionAproximada=" + duracionAproximada + ", costo=" + costo + "]";
-	}
-	
+				+ ", horario=" + horario + ", duracionAproximada=" + duracionAproximada + "]";
+	}	
 
 }

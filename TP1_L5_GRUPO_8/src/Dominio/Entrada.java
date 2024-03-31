@@ -8,24 +8,30 @@ public abstract class Entrada {
 	private static final int ID =  0;
 	private static int cont=ID;
 	private int numeroEntrada;
-    private String nombreShow;
-    private String diaEvento;
-    private String horario;
+    private String nombreShow;    
     private double duracionAproximada;
+    private FechaHora fechaHora;
 
 	// Constructor
-    public Entrada( String nombreShow, String diaEvento, String horario,
-                  double duracionAproximada) {
+    public Entrada(String nombreShow,double duracionAproximada, FechaHora fechaHora) {
         this.nombreShow = nombreShow;
-        this.diaEvento = diaEvento;
-        this.horario = horario;
+        
         this.duracionAproximada = duracionAproximada;
+        this.fechaHora = fechaHora;
         
         cont++;
 		this.numeroEntrada = cont;
     }
 
-    // Métodos abstractos que deben ser implementados por las clases que hereden de Evento  
+    public String getFechaHora() {
+		return fechaHora.toString();
+	}
+
+	public void setFechaHora(FechaHora fechaHora) {
+		this.fechaHora = fechaHora;
+	}
+
+	// Métodos abstractos que deben ser implementados por las clases que hereden de Evento  
     public abstract void calcularPrecio();
 
     // Getters y setters
@@ -35,15 +41,7 @@ public abstract class Entrada {
 
     public String getNombreShow() {
         return nombreShow;
-    }
-
-    public String getDiaEvento() {
-        return diaEvento;
-    }
-
-    public String getHorario() {
-        return horario;
-    }
+    }    
 
     public double getDuracionAproximada() {
         return duracionAproximada;
@@ -51,8 +49,8 @@ public abstract class Entrada {
 
 	@Override
 	public String toString() {
-		return "Entrada [numeroEntrada=" + numeroEntrada + ", nombreShow=" + nombreShow + ", diaEvento=" + diaEvento
-				+ ", horario=" + horario + ", duracionAproximada=" + duracionAproximada + "]";
+		
+		return "Entrada [numeroEntrada=" + numeroEntrada + ", nombreShow=" + nombreShow + ", duracionAproximada=" + duracionAproximada + "]";
 	}	
 
 }

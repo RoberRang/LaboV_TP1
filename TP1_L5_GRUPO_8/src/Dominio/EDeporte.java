@@ -1,6 +1,6 @@
 package Dominio;
 
-public class EDeporte extends Entrada {
+public class EDeporte extends Entrada implements IFechaHora {
 	/*Las entradas de los eventos de deportes tienen un valor fijo según el tipo de deporte, 
 	el futbol tiene un valor fijo de $300, el rugby tiene un valor fijo de 450$ y hockey 
 	tiene un valor fijo de 380$. El deporte puede ser clasificado de manera nacional o 
@@ -11,10 +11,11 @@ public class EDeporte extends Entrada {
 	private double costo;
 	private Deporte deporte;	
 	
-	public EDeporte(String nombreShow, String diaEvento, String horario, double duracionAproximada, Deporte deporte, boolean internacional) {
-		super(nombreShow, diaEvento, horario, duracionAproximada);
+	public EDeporte(String nombreShow, double duracionAproximada, FechaHora fechaHora, Deporte deporte, boolean internacional) {
+		super(nombreShow, duracionAproximada, fechaHora);
 		// TODO Auto-generated constructor stub
 		this.setDeporte(deporte);
+		this.setFechaHora(fechaHora);
 		this.setInternacional(internacional);
 		this.calcularPrecio();
 	}
@@ -24,7 +25,7 @@ public class EDeporte extends Entrada {
 		// TODO Auto-generated method stub
 		this.costo = this.deporte.getCostoDeporte();
 		if (this.internacional)
-			this.costo *= 0.3;		
+			this.costo *= 1.3;		
 	}
 
 	public boolean isInternacional() {
@@ -56,5 +57,9 @@ public class EDeporte extends Entrada {
 		String respuesta = this.internacional ? " Internacional": " Local";
 		return super.toString() + " EDeporte " + respuesta + ", costo=" + costo + ", deporte=" + deporte + "]";
 	}	
-
+	
+	@Override
+	public String DarFechaHora() {
+		return super.getFechaHora();
+	}
 }

@@ -34,4 +34,11 @@ public class Banda {
     public void setTipoMusical(TipoMusical tipoMusical) {
         this.tipoMusical = tipoMusical;
     }
+
+	@Override
+	public String toString() {
+		return "Banda [ID=" + ID + ", nombre=" + nombre + ", tipoMusical=" + tipoMusical + "]";
+	}
+    
+    
 }

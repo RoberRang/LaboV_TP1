@@ -9,13 +9,15 @@ public class main {
 		
 		//Add polimorfismo en ENTRADA
 		
-		Entrada eDepo = new EDeporte("Fulbo",1,fechaHora,Deporte.FUTBOL, true);
-		Entrada eDepo1 = new EDeporte("RUGBY",1,fechaHora,Deporte.RUGBY, false);
-		Entrada eDepo2 = new EDeporte("HOCKEY",1,fechaHora,Deporte.HOCKEY, false);
+		Entrada eDepo1 = new EDeporte("Fulbo 1",1,fechaHora,Deporte.FUTBOL, true);
+		Entrada eDepo2 = new EDeporte("Fulbo 2",1,fechaHora,Deporte.FUTBOL, false);
+		Entrada eDepo3 = new EDeporte("RUGBY",1,fechaHora,Deporte.RUGBY, false);
+		Entrada eDepo4 = new EDeporte("HOCKEY",1,fechaHora,Deporte.HOCKEY, false);
 
-		System.out.println( eDepo.toString() + " , " + eDepo.DarFechaHora());
-		System.out.println( eDepo1.toString()+ " , " + eDepo1.DarFechaHora());
+		System.out.println( eDepo1.toString() + " , " + eDepo1.DarFechaHora());
 		System.out.println( eDepo2.toString()+ " , " + eDepo2.DarFechaHora());
+		System.out.println( eDepo3.toString()+ " , " + eDepo3.DarFechaHora());
+		System.out.println( eDepo4.toString()+ " , " + eDepo4.DarFechaHora());
 		
 
 		//Inicio - Instancia de Teatro 	
@@ -34,12 +36,10 @@ public class main {
 		System.out.println(obra.addActorPrincipal(act5));
 		
 		TipoTeatro tipoteatro = new TipoTeatro(1, "Teatro a la gorra", "Comedia");
-		
-		
 		Teatro teatro =new Teatro("Teatro UTN", tipoteatro, obra);
 		
 		
-		ETeatro entradaT = new ETeatro("Show UTN",100,fechaHora,teatro);
+		Entrada entradaT = new ETeatro("Show UTN",100,fechaHora,teatro);
 		Entrada entradaT2 = new ETeatro("White Teatro",100,fechaHora,teatro);
 		
 		System.out.println(entradaT.toString()+ " , " + entradaT.DarFechaHora());
@@ -55,7 +55,9 @@ public class main {
 		bs.add(b2);
 		bs.add(b3);
 		ERecital eRecital = new ERecital("Lollapalooza", 3, null, false, b1, bs);
+		ERecital eRecital2 = new ERecital("Lollapalooza", 3, null, true, b1, bs);
 		System.out.println(eRecital.toString());
+		System.out.println(eRecital2.toString());
 		
 	//
 		

@@ -27,7 +27,7 @@ public class ETeatro extends Entrada implements IFechaHora{
 	@Override
 	public String DarFechaHora() {
 		// TODO Auto-generated method stub
-		return super.getFechaHora();
+		return super.getFechaHora() + " Para el show: " + this.getNombreShow();
 	}
 	
 	
@@ -63,9 +63,6 @@ public class ETeatro extends Entrada implements IFechaHora{
 
 	}
 
-
-
-	
 
 	
 }

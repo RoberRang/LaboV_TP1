@@ -56,10 +56,13 @@ public class EDeporte extends Entrada implements IFechaHora {
 	public String toString() {
 		String respuesta = this.internacional ? " Internacional": " Local";
 		return super.toString() + " EDeporte " + respuesta + ", costo: " + costo + ", deporte:" + deporte;
-	}	
-	
+	}
+
 	@Override
 	public String DarFechaHora() {
-		return super.getFechaHora();
-	}
+		// TODO Auto-generated method stub
+		return super.getFechaHora()+ " Para el show: " + this.getNombreShow();	
+	
+	}	
+	
 }

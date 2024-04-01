@@ -6,29 +6,31 @@ public class main {
 
 	public static void main(String[] args) {
 		FechaHora fechaHora = new FechaHora(1,4,2024,10,30);
-		//
-		EDeporte eDepo = new EDeporte("Fulbo",1,fechaHora,Deporte.FUTBOL, true);
-		EDeporte eDepo1 = new EDeporte("RUGBY",1,fechaHora,Deporte.RUGBY, false);
-		EDeporte eDepo2 = new EDeporte("HOCKEY",1,fechaHora,Deporte.HOCKEY, false);
+		
+		//Add polimorfismo en ENTRADA
+		
+		Entrada eDepo = new EDeporte("Fulbo",1,fechaHora,Deporte.FUTBOL, true);
+		Entrada eDepo1 = new EDeporte("RUGBY",1,fechaHora,Deporte.RUGBY, false);
+		Entrada eDepo2 = new EDeporte("HOCKEY",1,fechaHora,Deporte.HOCKEY, false);
 
 		System.out.println( eDepo.toString() + " , " + eDepo.DarFechaHora());
-		System.out.println( eDepo1.toString()+ " , " + eDepo.DarFechaHora());
-		System.out.println( eDepo2.toString()+ " , " + eDepo.DarFechaHora());
+		System.out.println( eDepo1.toString()+ " , " + eDepo1.DarFechaHora());
+		System.out.println( eDepo2.toString()+ " , " + eDepo2.DarFechaHora());
 		
 
-		// Inicio - Instancia de Teatro 	
+		//Inicio - Instancia de Teatro 	
 		Actor act = new Actor(1,"Jose Morales");
-		Actor act2 = new Actor(2,"Jose2 Morales");
-		Actor act3 = new Actor(3,"Jose3 Morales");
-		Actor act4 = new Actor(4,"Jose4 Morales");
-		Actor act5 = new Actor(5,"Jose5 Morales");
+		Actor act2 = new Actor(2,"Roberto");
+		Actor act3 = new Actor(3,"Estefania");
+		Actor act4 = new Actor(4,"Gabriel");
+		Actor act5 = new Actor(5,"Andrea");
 
 		Obra obra = new Obra("Jaimito", 40);
 		
 		System.out.println(obra.addActorPrincipal(act));
 		System.out.println(obra.addActorPrincipal(act2));
 		System.out.println(obra.addActorPrincipal(act3));
-		System.out.println(obra.addActorPrincipal(act4));
+		System.out.println(obra.addActorReparto(act4));
 		System.out.println(obra.addActorPrincipal(act5));
 		
 		TipoTeatro tipoteatro = new TipoTeatro(1, "Teatro a la gorra", "Comedia");
@@ -37,11 +39,13 @@ public class main {
 		Teatro teatro =new Teatro("Teatro UTN", tipoteatro, obra);
 		
 		
-		ETeatro entradaT = new ETeatro("Show Teatro UTN",100,fechaHora,teatro);
+		ETeatro entradaT = new ETeatro("Show UTN",100,fechaHora,teatro);
+		Entrada entradaT2 = new ETeatro("White Teatro",100,fechaHora,teatro);
 		
 		System.out.println(entradaT.toString()+ " , " + entradaT.DarFechaHora());
+		System.out.println(entradaT2.toString()+ " , " + entradaT2.DarFechaHora());
 		
-	// Fin . Instancia de Teatro 
+	// Fin - Instancia de Teatro 
 		
 		TipoMusical tm1 = new TipoMusical(1, "Musical", "Rock");
 		Banda b1 = new Banda(1, "Blink 182", tm1);

@@ -1,6 +1,6 @@
 package Dominio;
 
-public abstract class Entrada {
+public abstract class Entrada implements IFechaHora{
 	/*Todas las entradas poseen un número único de entrada, nombre del show, día y 
 	horario del evento, tiempo aproximado de duración y costo. El costo se calcula de 
 	manera diferente según el tipo de entrada*/
@@ -13,6 +13,7 @@ public abstract class Entrada {
     private FechaHora fechaHora;
 
 	// Constructor
+    
     public Entrada(String nombreShow,double duracionAproximada, FechaHora fechaHora) {
         this.nombreShow = nombreShow;
         
@@ -22,7 +23,7 @@ public abstract class Entrada {
         cont++;
 		this.numeroEntrada = cont;
     }
-
+    
     public String getFechaHora() {
 		return fechaHora.toString();
 	}

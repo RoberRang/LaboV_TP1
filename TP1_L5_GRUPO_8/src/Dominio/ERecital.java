@@ -72,5 +72,10 @@ public class ERecital extends Entrada {
 								+ Banda.getNombre() + ", BandasSoporte: " + BandasSoporte.toString()
 								+ ", Costo: " + Costo;
 	}
+
+	@Override
+	public String DarFechaHora() {
+		return super.getFechaHora();
+	}
 		
 }

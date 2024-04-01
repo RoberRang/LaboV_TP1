@@ -25,7 +25,7 @@ public class Actor {
 
 	@Override
 	public String toString() {
-		return " ID: " + ID + ", nombre: " + nombre;
+		return " ID: " + ID + ", nombre: " + nombre + ".";
 	}
     
     

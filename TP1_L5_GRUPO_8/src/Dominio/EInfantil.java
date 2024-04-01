@@ -59,7 +59,8 @@ public class EInfantil extends Entrada implements IFechaHora{
 	public String toString() {
 		String respuesta = this.souvenir ? "Con Souvenir" : "Sin Souvenir";
 
-		return super.toString() + " EInfantil [edad=" + String.valueOf(edad)  + ", " + respuesta + ", costo=" + String.valueOf(costo) + "]";
+		return super.toString() + " Edad: " + String.valueOf(edad)  + ", " + respuesta + 
+								  ", costo:" + String.valueOf(costo);
 	}
 
 	@Override

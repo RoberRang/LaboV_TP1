@@ -55,7 +55,7 @@ public class EDeporte extends Entrada implements IFechaHora {
 	@Override
 	public String toString() {
 		String respuesta = this.internacional ? " Internacional": " Local";
-		return super.toString() + " EDeporte " + respuesta + ", costo=" + costo + ", deporte=" + deporte + "]";
+		return super.toString() + " EDeporte " + respuesta + ", costo: " + costo + ", deporte:" + deporte;
 	}	
 	
 	@Override

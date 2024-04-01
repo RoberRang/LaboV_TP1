@@ -5,10 +5,43 @@ import java.util.ArrayList;
 public class main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		FechaHora fechaHora = new FechaHora(1,4,2024,10,30);
+		//
+		EDeporte eDepo = new EDeporte("Fulbo",1,fechaHora,Deporte.FUTBOL, true);
+		EDeporte eDepo1 = new EDeporte("RUGBY",1,fechaHora,Deporte.RUGBY, false);
+		EDeporte eDepo2 = new EDeporte("HOCKEY",1,fechaHora,Deporte.HOCKEY, false);
+
+		System.out.println( eDepo.toString() + " , " + eDepo.DarFechaHora());
+		System.out.println( eDepo1.toString()+ " , " + eDepo.DarFechaHora());
+		System.out.println( eDepo2.toString()+ " , " + eDepo.DarFechaHora());
 		
-		//EDeporte eDepo = new EDeporte("Futbo1", "03/04/2024", "20", 3, Deporte.FUTBOL, true);
-		//System.out.println( eDepo.toString());
+
+		// Inicio - Instancia de Teatro 	
+		Actor act = new Actor(1,"Jose Morales");
+		Actor act2 = new Actor(2,"Jose2 Morales");
+		Actor act3 = new Actor(3,"Jose3 Morales");
+		Actor act4 = new Actor(4,"Jose4 Morales");
+		Actor act5 = new Actor(5,"Jose5 Morales");
+
+		Obra obra = new Obra("Jaimito", 40);
+		
+		System.out.println(obra.addActorPrincipal(act));
+		System.out.println(obra.addActorPrincipal(act2));
+		System.out.println(obra.addActorPrincipal(act3));
+		System.out.println(obra.addActorPrincipal(act4));
+		System.out.println(obra.addActorPrincipal(act5));
+		
+		TipoTeatro tipoteatro = new TipoTeatro(1, "Teatro a la gorra", "Comedia");
+		
+		
+		Teatro teatro =new Teatro("Teatro UTN", tipoteatro, obra);
+		
+		
+		ETeatro entradaT = new ETeatro("Show Teatro UTN",100,fechaHora,teatro);
+		
+		System.out.println(entradaT.toString()+ " , " + entradaT.DarFechaHora());
+		
+	// Fin . Instancia de Teatro 
 		
 		TipoMusical tm1 = new TipoMusical(1, "Musical", "Rock");
 		Banda b1 = new Banda(1, "Blink 182", tm1);
@@ -19,6 +52,17 @@ public class main {
 		bs.add(b3);
 		ERecital eRecital = new ERecital("Lollapalooza", 3, null, false, b1, bs);
 		System.out.println(eRecital.toString());
+		
+	//
+		
+		EInfantil einfantil = new EInfantil("Infantil 1", 30, fechaHora, 7, false);
+		EInfantil einfantil2 = new EInfantil("Infantil 1", 30, fechaHora, 9, true);
+		
+		System.out.println(einfantil.toString()+ " , " + einfantil.DarFechaHora());
+		System.out.println(einfantil2.toString()+ " , " + einfantil2.DarFechaHora());
+
+		
+		
 
 	}
 

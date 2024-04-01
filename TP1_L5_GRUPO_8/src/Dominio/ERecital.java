@@ -10,7 +10,7 @@ public class ERecital extends Entrada {
 	private double Costo;
 
 	public ERecital(String nombreShow, double duracionAproximada, FechaHora fechaHora, boolean tipoEntrada, Banda banda, 
-			ArrayList<Banda> soporte) {
+		ArrayList<Banda> soporte) {
 		super(nombreShow, duracionAproximada, fechaHora);
 		this.setTipoEntradaVIP(tipoEntrada);
 		this.setBanda(banda);
@@ -68,8 +68,9 @@ public class ERecital extends Entrada {
 	@Override
 	public String toString() {
 		String respuesta = this.TipoEntradaVIP ? " VIP": " General";
-		return super.toString() + "TipoEntrada=" + respuesta + ", Banda= " + Banda.getNombre() + ", BandasSoporte= " + BandasSoporte.toString()
-				+ ", Costo=" + Costo;
+		return super.toString() + " TipoEntrada: " + respuesta + ", Banda: " 
+								+ Banda.getNombre() + ", BandasSoporte: " + BandasSoporte.toString()
+								+ ", Costo: " + Costo;
 	}
 		
 }

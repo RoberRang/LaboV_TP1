@@ -1,32 +1,46 @@
 package Dominio;
 
-import java.util.ArrayList;
-
 public class Teatro {
 	
-	private int ID;
+	private String nombreTeatro;
 	private TipoTeatro tipoteatro;
-	private ArrayList<Actor> Actores; // como maximo 3 actores principales
+	private Obra obra;
 	
 	
-	public int getID() {
-		return ID;
+	public Teatro(String nombreTeatro, TipoTeatro tipoteatro, Obra obra) {
+		this.nombreTeatro = nombreTeatro;
+		this.tipoteatro = tipoteatro;
+		this.obra = obra;
 	}
-	public void setID(int iD) {
-		this.ID = iD;
+	
+	public String getNombreTeatro() {
+		return nombreTeatro;
 	}
+	public void setNombreTeatro(String nombreTeatro) {
+		this.nombreTeatro = nombreTeatro;
+	}
+
 	public TipoTeatro getTipoteatro() {
 		return tipoteatro;
 	}
 	public void setTipoteatro(TipoTeatro tipoteatro) {
 		this.tipoteatro = tipoteatro;
 	}
-	public ArrayList<Actor> getActores() {
-		return Actores;
+	
+	public Obra getObra() {
+		return obra;
 	}
-	public void setActores(ArrayList<Actor> actores) {
-		this.Actores = actores;
+	public void setObra(Obra obra) {
+		this.obra = obra;
 	}
+
+	@Override
+	public String toString() {
+		return " Nombre: " + nombreTeatro + ", Tipo teatro: " 
+				+ tipoteatro.toString() + ", obra:" + obra.toString();
+	}
+
+	
 	
 	
 }

@@ -67,8 +67,8 @@ public class FechaHora {
 
 	@Override
 	public String toString() {
-		return "FechaHora [dia=" + dia + ", mes=" + mes + ", anio=" + anio + ", hora=" + hora + ", min=" + min
-				+ ", seg=" + seg + "]";
+		return " Fecha: " + dia + "/" + mes + "/" + anio + " , hora: " + hora + ":" + min
+				+ ":" + seg;
 	}
 	
 

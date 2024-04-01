@@ -37,7 +37,7 @@ public class Banda {
 
 	@Override
 	public String toString() {
-		return "Banda [ID=" + ID + ", nombre=" + nombre + ", tipoMusical=" + tipoMusical + "]";
+		return "ID Banda: " + ID + ", nombre: " + nombre + ", TipoMusical: " + tipoMusical;
 	}
     
     

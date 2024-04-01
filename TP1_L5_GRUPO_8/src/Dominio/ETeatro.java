@@ -18,6 +18,7 @@ public class ETeatro extends Entrada implements IFechaHora{
 		
 		super(nombreShow, duracionAproximada, fechaHora);
 		this.teatro=teatro;
+		this.calcularPrecio();
 		
 	}
 	
@@ -58,7 +59,7 @@ public class ETeatro extends Entrada implements IFechaHora{
 	
 	@Override
 	public String toString() {
-		return super.toString() + "ETeatro " + ", teatro: " + teatro + ", precio: $" + precio + ". ";
+		return super.toString() + " Teatro: " + teatro.toString() + ", precio: $" + precio;
 
 	}
 

@@ -33,7 +33,7 @@ public abstract class Tipo {
 
 	@Override
 	public String toString() {
-		return "Tipo [ID=" + ID + ", Nombre=" + Nombre + "]";
+		return "ID Tipo: " + ID + ", Nombre: " + Nombre;
 	}
 	
 

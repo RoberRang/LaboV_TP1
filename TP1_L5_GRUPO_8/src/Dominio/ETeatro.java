@@ -6,20 +6,29 @@ package Dominio;
 	drama, teatro o comedia.
  * */
 
-public class ETeatro extends Entrada{
+public class ETeatro extends Entrada implements IFechaHora{
 
-	public final double VALORFIJO=1350.50;
+	public static final double VALORFIJO=1350.50;
 	private Teatro teatro;
 	private double precio;
 	
 	// constructores 
 	
-	public ETeatro(String nombreShow, String diaEvento, String horario, double duracionAproximada, Teatro teatro) {
+	public ETeatro(String nombreShow,double duracionAproximada, FechaHora fechaHora,Teatro teatro) {
 		
-		super(nombreShow, diaEvento, horario, duracionAproximada);
+		super(nombreShow, duracionAproximada, fechaHora);
 		this.teatro=teatro;
 		
 	}
+	
+	// Metodo implementado de la interface 
+	
+	@Override
+	public String DarFechaHora() {
+		// TODO Auto-generated method stub
+		return super.getFechaHora();
+	}
+	
 	
 	//metodo abstractor implementado de Entrada
 	
@@ -52,7 +61,8 @@ public class ETeatro extends Entrada{
 		return super.toString() + "ETeatro " + ", teatro: " + teatro + ", precio: $" + precio + ". ";
 
 	}
-	
+
+
 
 	
 

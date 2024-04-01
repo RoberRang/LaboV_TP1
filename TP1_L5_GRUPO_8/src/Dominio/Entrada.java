@@ -50,7 +50,8 @@ public abstract class Entrada {
 	@Override
 	public String toString() {
 		
-		return "Entrada [numeroEntrada=" + numeroEntrada + ", nombreShow=" + nombreShow + ", duracionAproximada=" + duracionAproximada + "]";
+		return "Entrada [numeroEntrada=" + numeroEntrada + ", nombreShow=" + nombreShow + 
+				", duracionAproximada=" + duracionAproximada + "]";
 	}	
 
 }

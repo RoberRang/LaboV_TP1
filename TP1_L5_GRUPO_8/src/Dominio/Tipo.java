@@ -33,7 +33,7 @@ public abstract class Tipo {
 
 	@Override
 	public String toString() {
-		return "ID Tipo: " + ID + ", Nombre: " + Nombre;
+		return "Nombre: " + Nombre;
 	}
 	
 

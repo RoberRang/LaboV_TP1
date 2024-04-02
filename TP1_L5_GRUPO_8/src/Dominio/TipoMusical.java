@@ -18,7 +18,7 @@ public class TipoMusical extends Tipo {
 
 	@Override
 	public String toString() {
-		return "Descripcion: " + descripcion;
+		return descripcion;
 	}
     
     

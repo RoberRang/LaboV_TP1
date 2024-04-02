@@ -2,7 +2,7 @@ package Dominio;
 
 import java.util.ArrayList;
 
-public class ERecital extends Entrada {
+public class ERecital extends Entrada implements IFechaHora {
 
 	private boolean TipoEntradaVIP;
 	private Banda Banda; // Objeto del tipo Banda (crear Clase)
@@ -68,8 +68,8 @@ public class ERecital extends Entrada {
 	@Override
 	public String toString() {
 		String respuesta = this.TipoEntradaVIP ? " VIP": " General";
-		return super.toString() + " TipoEntrada: " + respuesta + ", Banda: " 
-								+ Banda.getNombre() + ", BandasSoporte: " + BandasSoporte.toString()
+		return super.toString() + " TipoEntrada:" + respuesta + ", Banda: " 
+								+ Banda.toString() + ", Bandas Soporte: " + BandasSoporte.toString()
 								+ ", Costo: " + Costo;
 	}
 

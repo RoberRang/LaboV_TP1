@@ -29,11 +29,11 @@ public class main {
 
 		Obra obra = new Obra("Jaimito", 40);
 		
-		System.out.println(obra.addActorPrincipal(act));
+		/*System.out.println(obra.addActorPrincipal(act));
 		System.out.println(obra.addActorPrincipal(act2));
 		System.out.println(obra.addActorPrincipal(act3));
 		System.out.println(obra.addActorReparto(act4));
-		System.out.println(obra.addActorPrincipal(act5));
+		System.out.println(obra.addActorPrincipal(act5));*/
 		
 		TipoTeatro tipoteatro = new TipoTeatro(1, "Teatro a la gorra", "Comedia");
 		Teatro teatro =new Teatro("Teatro UTN", tipoteatro, obra);
@@ -46,6 +46,8 @@ public class main {
 		System.out.println(entradaT2.toString()+ " , " + entradaT2.DarFechaHora());
 		
 	// Fin - Instancia de Teatro 
+	
+	// Instancia ERecital
 		
 		TipoMusical tm1 = new TipoMusical(1, "Musical", "Rock");
 		Banda b1 = new Banda(1, "Blink 182", tm1);
@@ -54,12 +56,13 @@ public class main {
 		ArrayList<Banda> bs = new ArrayList<>();
 		bs.add(b2);
 		bs.add(b3);
-		ERecital eRecital = new ERecital("Lollapalooza", 3, null, false, b1, bs);
-		ERecital eRecital2 = new ERecital("Lollapalooza", 3, null, true, b1, bs);
-		System.out.println(eRecital.toString());
-		System.out.println(eRecital2.toString());
+		ERecital eRecital = new ERecital("Lollapalooza", 3, fechaHora, false, b1, bs);
+		ERecital eRecital2 = new ERecital("Lollapalooza", 3, fechaHora, true, b1, bs);
 		
-	//
+		System.out.println(eRecital.toString()+ " , " + eRecital.DarFechaHora());
+		System.out.println(eRecital2.toString()+ " , " + eRecital2.DarFechaHora());
+		
+	// Instancia EInfantil
 		
 		EInfantil einfantil = new EInfantil("Infantil 1", 30, fechaHora, 7, false);
 		EInfantil einfantil2 = new EInfantil("Infantil 1", 30, fechaHora, 9, true);

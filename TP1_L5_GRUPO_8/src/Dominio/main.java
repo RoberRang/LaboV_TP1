@@ -28,19 +28,28 @@ public class main {
 		Actor act5 = new Actor(5,"Andrea");
 
 		Obra obra = new Obra("Jaimito", 40);
+		Obra obra2 = new Obra("El Chavo", 40);
 		
 		/*System.out.println(obra.addActorPrincipal(act));
 		System.out.println(obra.addActorPrincipal(act2));
 		System.out.println(obra.addActorPrincipal(act3));
 		System.out.println(obra.addActorReparto(act4));
 		System.out.println(obra.addActorPrincipal(act5));*/
+		obra.addActorPrincipal(act);
+		obra.addActorPrincipal(act2);
+		obra.addActorPrincipal(act3);
+		obra.addActorReparto(act4);
+		obra.addActorPrincipal(act5);
+		
 		
 		TipoTeatro tipoteatro = new TipoTeatro(1, "Teatro a la gorra", "Comedia");
-		Teatro teatro =new Teatro("Teatro UTN", tipoteatro, obra);
+		TipoTeatro tipoteatro2 = new TipoTeatro(1, "Teatro a la gorra2", "Drama");
+		Teatro teatro =new Teatro("Gran Rex", tipoteatro, obra);
+		Teatro teatro2 =new Teatro("Gran Rex", tipoteatro2, obra2);
 		
 		
-		Entrada entradaT = new ETeatro("Show UTN",100,fechaHora,teatro);
-		Entrada entradaT2 = new ETeatro("White Teatro",100,fechaHora,teatro);
+		Entrada entradaT = new ETeatro("Black Teatro",100,fechaHora,teatro);
+		Entrada entradaT2 = new ETeatro("White Teatro",100,fechaHora,teatro2);
 		
 		System.out.println(entradaT.toString()+ " , " + entradaT.DarFechaHora());
 		System.out.println(entradaT2.toString()+ " , " + entradaT2.DarFechaHora());

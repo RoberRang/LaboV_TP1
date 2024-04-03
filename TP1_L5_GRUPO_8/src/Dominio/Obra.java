@@ -35,7 +35,7 @@ public class Obra {
 	
 	public String addActorReparto(Actor actorR) {
 		
-		actoresPrincipales.add(actorR);
+		actoresReparto.add(actorR);
 		return "Actor reparto: "+ actorR.getNombre() +", con exito";
 		
 	}
@@ -74,7 +74,7 @@ public class Obra {
 
 	@Override
 	public String toString() {
-		return " Obra " + nombre + ", duracion: " + duracion + 
+		return  " "+nombre + ", Duracion: " + duracion + ", " + 
 				DarActoresToString(this.actoresPrincipales,true) + 
 				DarActoresToString(this.actoresReparto,false);
 	}

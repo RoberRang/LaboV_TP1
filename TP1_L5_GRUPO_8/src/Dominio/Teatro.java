@@ -36,11 +36,10 @@ public class Teatro {
 
 	@Override
 	public String toString() {
-		return " Nombre: " + nombreTeatro + ", Tipo teatro: " 
-				+ tipoteatro.toString() + ", obra:" + obra.toString();
+		return nombreTeatro + ", Tipo teatro: " 
+				+ tipoteatro.toString() + ", Obra:" + obra.toString();
 	}
 
-	
-	
+
 	
 }

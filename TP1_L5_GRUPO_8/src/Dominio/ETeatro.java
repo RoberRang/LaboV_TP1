@@ -59,7 +59,7 @@ public class ETeatro extends Entrada implements IFechaHora{
 	
 	@Override
 	public String toString() {
-		return super.toString() + " Teatro: " + teatro.toString() + ", precio: $" + precio;
+		return super.toString() + " Teatro: " + teatro.toString() + ", Precio: $" + precio;
 
 	}
 
